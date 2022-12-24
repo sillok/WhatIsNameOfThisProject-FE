@@ -75,14 +75,19 @@ export default {
       fixed: false,
       items: [
         {
-          icon: 'mdi-apps',
-          title: 'Welcome',
+          icon: 'mdi-home ',
+          title: '홈',
           to: '/'
         },
         {
           icon: 'mdi-chart-bubble',
-          title: '프로젝트 이름 추천',
+          title: '이름 추천',
           to: '/SuggProject'
+        },
+        {
+          icon: 'mdi-copyright',
+          title: '크레딧',
+          to: '/credit'
         }
       ],
       miniVariant: false,
