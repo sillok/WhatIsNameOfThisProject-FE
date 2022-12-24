@@ -77,20 +77,20 @@ export default {
             }
           })
           .then(function (response) {
-            console.log(response)
-            if(response.data.answer === "waiting"){
-              console.log(response.data.answer)  
-            } else {
-              it.response = true
-              it.loading = false
-              clearInterval(interval)
-              it.result = response.data.answer
-            }
+            it.response = true
+            it.loading = false
+            clearInterval(interval)
+            it.result = response.data.answer
           })
+          .catch(function (error) {})
         }, 2000);
       })
       .catch(function (error) {
         alert(error)
+      })
+      .finally(function () {
+        it.response = false
+        it.loading = false
       })
     }
   }
